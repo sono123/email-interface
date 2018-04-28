@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EmailInterface</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container-fluid">
+
+      <nav class="navbar navbar-toggleable-md navbar-light fixed-top bg-faded">
+        <div class="container">
+          
+          <div id="menu-one" class="dropdown">
+            <button id="menu-one-btn" class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span id="sandwich-icon" class="oi oi-menu"></span>
+            </button>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Inbox</a>
+              <a class="dropdown-item" href="#">Sent</a>
+              <a class="dropdown-item" href="#">Junk</a>
+              <a class="dropdown-item" href="#">Trash</a>
+              <a class="dropdown-item" href="#">Options</a>
+            </div>
+          </div>
+
+          <div id="menu-two" class="dropdown">
+            <button id="menu-one-btn" class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span id="sandwich-icon" class="oi oi-task"></span>
+            </button>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Inbox</a>
+              <a class="dropdown-item" href="#">Sent</a>
+              <a class="dropdown-item" href="#">Junk</a>
+              <a class="dropdown-item" href="#">Trash</a>
+              <a class="dropdown-item" href="#">Options</a>
+            </div>
+          </div>
+
+          <form id="search-form" class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search">
+            <button id="search-btn" class="btn btn-outline-success my-2 my-sm-0" type="submit">
+              <span class="oi oi-magnifying-glass"></span>
+            </button>
+          </form>
+
+        </div>
+      </nav>
+
+      <div class="row" style="height:1500px;background:#f7f9fc;"></div>
+
+      <%= yield %>
+
+    </div>
+  </body>
+</html>
+
+
+
+
