@@ -1,3 +1,136 @@
-// Place all the styles related to the Messages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.message-summary {
+  padding: 0.75rem 1rem;
+  font-family: 'Quicksand', sans-serif;
+}
+
+
+.check-input {
+  margin-right: .5rem;
+  opacity: 0;
+  position: absolute;
+  margin-top: .25rem;
+  margin-left: -1.25rem;
+}
+
+
+.check-label {
+  padding-left: 2rem;
+  margin: 0;
+  display: block;
+}
+
+.check-label:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1px;
+    width: 14px;
+    height: 14px;
+    z-index: 0;
+    background: #e6e8ec;
+    margin-top: .55rem;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+.check-label:after {
+  width: 0;
+  height: 0;
+  border: 3px solid transparent;
+  left: 4px;
+  top: 10px;
+  content: '';
+  position: absolute;
+  -webkit-transform: rotateZ(37deg);
+  transform: rotateZ(37deg);
+  -webkit-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+  z-index: 1;
+}
+
+
+input[type="checkbox"]:checked ~ label.check-label:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  z-index: 0;
+  border: none;
+  background: #9f98d9;
+  margin-top: .55rem;
+  transition: background 0.25s linear;
+  -webkit-transition: background 0.25s linear;
+}
+
+input[type="checkbox"]:checked ~ label.check-label:after {
+  top: .55rem;
+  left: -1px;
+  width: 7px;
+  height: 12px;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  -webkit-transform: rotateZ(37deg);
+  transform: rotateZ(37deg);
+  -webkit-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+}
+
+
+.starred {
+  margin: .45rem 1rem;
+}
+
+.starred:empty:before {
+  color: #e6e8ec;
+}
+
+.message-summary {
+  p {
+    margin: .35rem .5rem;
+  }
+  .sender {
+    color: #7c72d2;
+  }
+  .subject {
+    color: #707275;
+  }
+  .body {
+    color: #adb3bd;
+  }
+  .date {
+    color: #778498;
+  }
+}
+
+
+
+.subject-body-preview {
+  display: block;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
