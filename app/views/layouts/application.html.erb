@@ -8,6 +8,8 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.css" rel="stylesheet">
   </head>
 
@@ -15,47 +17,85 @@
     <div class="container-fluid">
 
       <nav class="navbar navbar-toggleable-md navbar-light fixed-top bg-faded">
-        <div class="container">
-          
-          <div id="menu-one" class="dropdown">
-            <button id="menu-one-btn" class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span id="sandwich-icon" class="oi oi-menu"></span>
-            </button>
+        <div class="container-fluid">
 
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Inbox</a>
-              <a class="dropdown-item" href="#">Sent</a>
-              <a class="dropdown-item" href="#">Junk</a>
-              <a class="dropdown-item" href="#">Trash</a>
-              <a class="dropdown-item" href="#">Options</a>
+          <div>
+            <div id="brand-div">
+              <!-- <h3>Inb@x</h3> -->
+              <%= image_tag "cube-logo.svg", style: "height:35px;" %>
+            </div>
+
+            <div id="menu-one" class="dropdown">
+              <button id="menu-one-btn" class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span id="sandwich-icon" class="oi oi-menu"></span>
+              </button>
+
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a id="compose-link" class="dropdown-item" href="#">
+                  <!-- <span id="plus-icon" class="oi oi-plus"></span> -->  
+                  Compose
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Inbox</a>
+                <a class="dropdown-item" href="#">Sent</a>
+                <a class="dropdown-item" href="#">Junk</a>
+                <a class="dropdown-item" href="#">Trash</a>
+                <a class="dropdown-item" href="#">Drafts</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Important</a>
+                <a class="dropdown-item" href="#">Social</a>
+                <a class="dropdown-item" href="#">Promotions</a>
+              </div>
+            </div>
+
+            <div id="menu-two" class="dropdown">
+              <button id="menu-two-btn" class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span id="sandwich-icon" class="oi oi-task"></span>
+              </button>
+
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">All</a>
+                <a class="dropdown-item" href="#">None</a>
+                <a class="dropdown-item" href="#">Read</a>
+                <a class="dropdown-item" href="#">Unread</a>
+                <a class="dropdown-item" href="#">Starred</a>
+              </div>
             </div>
           </div>
 
-          <div id="menu-two" class="dropdown">
-            <button id="menu-one-btn" class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span id="sandwich-icon" class="oi oi-task"></span>
-            </button>
+          <!-- <div id="brand-div">
+            <h3>Inbox</h3>
+          </div> -->
 
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Inbox</a>
-              <a class="dropdown-item" href="#">Sent</a>
-              <a class="dropdown-item" href="#">Junk</a>
-              <a class="dropdown-item" href="#">Trash</a>
-              <a class="dropdown-item" href="#">Options</a>
+          <div>
+            <form id="search-form" class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search">
+              <button id="search-btn" class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                <span class="oi oi-magnifying-glass"></span>
+              </button>
+            </form>
+
+            <div id="menu-three" class="dropdown">
+              <button id="menu-three-btn" class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <!-- <span id="user-icon" class="oi oi-task"></span> -->
+                <%= image_tag "bio-picture.svg", style: "height:35px;border-radius:50%;" %>
+              </button>
+
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Logout</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Settings</a>
+                <a class="dropdown-item" href="#">Privacy</a>
+                <a class="dropdown-item" href="#">Security</a>
+                <a class="dropdown-item" href="#">Add Account</a>
+              </div>
             </div>
           </div>
-
-          <form id="search-form" class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search">
-            <button id="search-btn" class="btn btn-outline-success my-2 my-sm-0" type="submit">
-              <span class="oi oi-magnifying-glass"></span>
-            </button>
-          </form>
 
         </div>
       </nav>
 
-      <div class="row" style="height:1500px;background:#f7f9fc;"></div>
+      <div id="spacer" class="row" style="height:3.25rem;"></div>
 
       <%= yield %>
 
