@@ -36,6 +36,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap', '~> 4.0'
 gem 'bootstrap-sass'
 gem 'jquery-rails', '4.3.1'
+gem 'popper_js', '~> 1.9', '>= 1.9.9'
 
 
 group :development, :test do

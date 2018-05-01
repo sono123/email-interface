@@ -21,6 +21,80 @@
         <p class="date">4/29/2018</p>
       </div>
     </div>
+
+    <div class="message-detail row">
+        <div class="col-sm-6">
+          <button class="details-btn btn dropdown-toggle" type="button" id="dropdownMenuButton-num" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="oi oi-info"></span>
+          </button>
+
+          <div class="dropdown-menu details-menu" aria-labelledby="dropdownMenuButton-num">
+            <p class="dropdown-item" href="#"><span class="detail-heading">from: </span><span class="detail-heading-content">Mike Jones</span></p>
+            <p class="dropdown-item" href="#"><span class="detail-heading">to: </span><span class="detail-heading-content">steve@gmail.com</span></p>
+            <p class="dropdown-item" href="#"><span class="detail-heading">subject: </span><span class="detail-heading-content">Ruby Meetup Next Week</span></p>
+            <p class="dropdown-item" href="#"><span class="detail-heading">date: </span><span class="detail-heading-content">Fri, Apr 20, 2018 at 11:48 AM</span></p>
+            <p class="dropdown-item" href="#"><span class="detail-heading">reply-to: </span><span class="detail-heading-content">mikejones@gmail.com</span></p>
+            <p class="dropdown-item" href="#"><span class="detail-heading">mailed-by: </span><span class="detail-heading-content">gmail.com</span></p>
+            <p class="dropdown-item" href="#"><span class="detail-heading">signed-by: </span><span class="detail-heading-content">gmail.com</span></p>
+            <p class="dropdown-item" href="#"><span class="detail-heading">security: </span><span class="detail-heading-content"> Standard encryption (TLS)</span></p>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <button class="close-btn float-right btn" type="button" id="message-num">
+            <span class="reply-icon oi oi-x"></span>
+          </button>
+
+          <button class="message-menu-btn float-right btn dropdown-toggle" type="button" id="message-menu-num" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="reply-icon oi oi-ellipses"></span>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="message-menu-num">
+            <a class="dropdown-item" href="#">Reply</a>
+            <a class="dropdown-item" href="#">Forward</a>
+            <a class="dropdown-item" href="#">Delete</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Filter</a>
+            <a class="dropdown-item" href="#">Print</a>
+            <a class="dropdown-item" href="#">Add Contact</a>
+            <a class="dropdown-item" href="#">Block</a>
+            <a class="dropdown-item" href="#">Spam</a>
+            <a class="dropdown-item" href="#">Mark Unread</a>
+          </div>
+
+          <button class="reply-btn float-right btn" type="button" id="message-num">
+            <span class="reply-icon oi oi-share"></span>
+          </button>
+        </div>
+
+        <div class="col-sm-12">
+          <div class="container email-message-body">
+            <p>Hi there,</p>
+            <br>
+            <p>During the above window the network engineering team will be performing upgrades on critical hardware within our San Francisco regions. This is pro-active maintenance to ensure optimal performance of the networking infrastructure.</p>
+            <br>
+            <p>Expected Impact: Throughout the first four hours of the maintenance window, we expect there to be intermittent periods of minor packet loss and increased latency as we make upgrades. We expect this impact to arise five or six times during the course of the maintenance, and the impact will be very brief.</p>
+            <br>
+            <p>Approximately 30 minutes prior to the maintenance we will post an update on status.digitalocean.com and periodic updates will follow as work progresses.</p>
+            <br>
+            <p>Do not hesitate to contact support if you have any additional questions or concerns. You may do so by opening a ticket, or by replying to this email.</p>
+            <br>
+            <p>Thank you,</p>
+            <p>DigitalOcean Network Team</p>
+            <br>
+            <p>Affected Droplets:</p>
+            <p>personal-projects-01</p>
+            <p>portfolio-2018</p>
+
+            <textarea class="reply-textarea col-sm-12" rows=5 placeholder="click here to reply or forward"></textarea>
+          </div>
+        </div>
+        
+        <div class="delete-wrapper col-sm-12">
+          <button class="delete-btn float-right btn" type="button" id="message-num">
+            <span class="reply-icon oi oi-trash"></span>
+          </button>
+        </div>
+    </div>
   </div>
 </div>
 
