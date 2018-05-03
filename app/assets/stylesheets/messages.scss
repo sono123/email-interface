@@ -1,11 +1,5 @@
 
 
-.message-summary {
-  padding: 0.75rem 1rem;
-  font-family: 'Quicksand', sans-serif;
-}
-
-
 .check-input {
   margin-right: .5rem;
   opacity: 0;
@@ -92,7 +86,10 @@ input[type="checkbox"]:checked ~ label.check-label:after {
 }
 
 .message-summary {
-  background: #f7f9fc;
+  padding: 0.75rem 1rem;
+  /*font-family: 'Quicksand', sans-serif;*/
+  /*background: #f7f9fc;*/
+  background: #f7f8f9;
   -moz-transition: all .1s ease-in;
   -o-transition: all .1s ease-in;
   -webkit-transition: all .1s ease-in;
@@ -103,6 +100,7 @@ input[type="checkbox"]:checked ~ label.check-label:after {
   .sender {
     display: inline;
     color: #7c72d2;
+    font-weight: 700;
     /*color: #9895be;*/
     /*font-weight: bold;*/
     vertical-align: .15rem;
@@ -119,7 +117,9 @@ input[type="checkbox"]:checked ~ label.check-label:after {
     font-size: .85rem;
     color: #778498;
   }
-  .important {
+  .important-icon {
+    color: #e6e8ed;
+    margin-left: .25rem;
   }
   .square {
     display: inline-flex;
@@ -162,7 +162,6 @@ input[type="checkbox"]:checked ~ label.check-label:after {
   background: white;
   padding-top: 1rem;
   box-shadow: inset 0 2px 2px 0 rgba(0,0,0,0.14), inset 0 2px 2px 0 rgba(0,0,0,0.14);
-
   .dropdown-menu {
     p {
       font-size: .8rem;
@@ -190,7 +189,8 @@ input[type="checkbox"]:checked ~ label.check-label:after {
     max-width: 100%;
   }
   .details-btn {
-    color: #cec1fc;
+    /*color: #cec1fc;*/
+    color: #7c71d2;
     font-size: .8rem;
     background: transparent;
     border: none;
@@ -219,7 +219,8 @@ input[type="checkbox"]:checked ~ label.check-label:after {
     -ms-transform: scaleX(-1);
   }
   .reply-btn, .message-menu-btn, .delete-btn {
-    color: #cec1fc;
+    /*color: #cec1fc;*/
+    color: #7c71d2;
     font-size: 1rem;
     line-height: 1;
     background: transparent;
@@ -238,12 +239,59 @@ input[type="checkbox"]:checked ~ label.check-label:after {
   .delete-wrapper {
     margin-bottom: 1rem;
   }
+
+  .message-menu {
+    .dropdown-menu {
+      left: -325%;
+    }
+  }
+}
+
+
+
+.to-from-wrapper {
+  img {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: inline;
+    vertical-align: top;
+    margin-top: .2rem;
+  }
+  .to-from {
+    display: inline-block;
+    width: 80%;
+    height: 35px;
+  }
+  p {
+    font-weight: bold;
+    /*color: #7c72d2;*/
+    /*color: #b0aae1;*/
+    color: #7c71d2;
+    margin: 0 .5rem 0;
+    font-size: .8rem;
+    /*font-family: 'Quicksand', sans-serif;*/
+    span {
+      color: #adb3bd;
+      display: inline-block;
+      margin-right: .5rem;
+    }
+  }
+}
+
+
+.email-message-subject {
+  margin-top: 3rem;
+  h5 {
+    /*font-family: 'Quicksand', sans-serif;*/
+    font-weight: 400;
+  }
 }
 
 
 .email-message-body {
-  font-family: 'Quicksand', sans-serif;
-  font-size: .8rem;
+  /*font-family: 'Quicksand', sans-serif;*/
+  font-size: .9rem;
   margin-top: 3rem;
   margin-bottom: 2rem;
   p {
@@ -281,12 +329,75 @@ input[type="checkbox"]:checked ~ label.check-label:after {
 
 
 
+trix-editor {
+  min-height: 7rem;
+  padding: 0.5rem 0.75rem;
+  font-size: .9rem;
+  background: #f7f9fc;
+  color: #6f7274;
+  border: none;
+  /* font-family: 'Quicksand', sans-serif; */
+  border-radius: .25rem;
+}
+
+trix-editor::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #acb5c2;
+  /*font-family: 'Quicksand', sans-serif;*/
+  font-weight: 100;
+}
+trix-editor::-moz-placeholder { /* Firefox 19+ */
+  color: #acb5c2;
+  /*font-family: 'Quicksand', sans-serif;*/
+  font-weight: 100;
+}
+trix-editor:-ms-input-placeholder { /* IE 10+ */
+  color: #acb5c2;
+  /*font-family: 'Quicksand', sans-serif;*/
+  font-weight: 100;
+}
+trix-editor:-moz-placeholder { /* Firefox 18- */
+  color: #acb5c2;
+  /*font-family: 'Quicksand', sans-serif;*/
+  font-weight: 100;
+}
+
+trix-toolbar {
+  .button_group {
+    border: none;
+    margin-bottom: 0;
+    button {
+      border: none;
+    }
+    button:hover {
+      background: #f7f9fc;
+    }
+  }
+}
 
 
+trix-toolbar .button_group button:not(:first-child), trix-toolbar .button_group input[type=button]:not(:first-child) {
+  border: none;
+}
 
+trix-toolbar .button_group button.active, trix-toolbar .button_group input[type=button].active {
+  background: #eff1f5;
+}
 
+.submit-message-btn {
+  padding: 0.35rem 1.5rem;
+  margin-top: .5rem;
+  background: #9d91fd;
+  color: white;
+  border: none;
+}
 
-
+.delete-message-btn {
+  padding: 0.35rem 1.5rem;
+  margin-top: .5rem;
+  background: #f06292;
+  color: white;
+  border: none;
+}
 
 
 
