@@ -305,6 +305,27 @@ input[type="checkbox"]:checked ~ label.check-label:after {
     font-family: 'Quicksand', sans-serif;
     border-radius: .25rem;
   }
+  .fake-textarea-div {
+    margin-top: 4rem;
+    height: 7rem;
+    background: #f7f9fc;
+    border-radius: .25rem;
+    color: #acb5c2;
+    padding: 0.5rem 0.75rem;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: .25rem;
+    border: none;
+    .reply-link {
+      a {
+        color: #968de4;
+      }
+    }
+    .forward-link {
+      a {
+        color: #968de4;
+      }
+    }
+  }
   textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: #acb5c2;
     font-family: 'Quicksand', sans-serif;
@@ -361,7 +382,55 @@ trix-editor:-moz-placeholder { /* Firefox 18- */
   font-weight: 100;
 }
 
+
+
+.fake-textarea-div {
+  font-size: .9rem;
+  margin-top: 4rem;
+  margin-top: 2rem;
+  height: 7rem;
+  background: #f7f9fc;
+  border-radius: .25rem;
+  color: #acb5c2;
+  padding: 0.5rem 0.75rem;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: .25rem;
+  border: none;
+  .reply-link {
+    a {
+      color: #968de4;
+    }
+  }
+  .forward-link {
+    a {
+      color: #968de4;
+    }
+  }
+}
+
+
+.receiver-input {
+  position: absolute;
+  width: calc(100% - 30px);
+  top: 2.5rem;
+  padding: 0.5rem 0.75rem;
+  font-size: .9rem;
+  background: #f7f9fc;
+  color: #6f7274;
+  border: none;
+  border-radius: .25rem;
+}
+
+.receiver-input:focus {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  border: none;
+  outline: none;
+}
+
+
 trix-toolbar {
+  margin-bottom: 4rem;
   .button_group {
     border: none;
     margin-bottom: 0;
@@ -381,6 +450,10 @@ trix-toolbar .button_group button:not(:first-child), trix-toolbar .button_group 
 
 trix-toolbar .button_group button.active, trix-toolbar .button_group input[type=button].active {
   background: #eff1f5;
+}
+
+.message-btns-wrapper {
+  margin-top: .75rem;
 }
 
 .submit-message-btn {

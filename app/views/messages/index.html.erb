@@ -132,14 +132,26 @@
             <p>personal-projects-01</p>
             <p>portfolio-2018</p>
 
-            <textarea class="reply-textarea col-sm-12 trix_editor" rows=5 placeholder="click here to reply or forward"></textarea>
+            <!-- <div class="fake-textarea-div col-sm-12">
+              <p>Click to <span class="reply-link"><a href="/temporary_message" data-remote="true"> reply </a></span> or <span class="forward-link"><a href="/temporary_message" data-remote="true"> forward</a></span>.</p>
+            </div> -->
           </div>
         </div>
       </div>
 
 
-
       <div class="col-sm-12">
+        <div class="container">
+          <div class="col-sm-12 message-form-wrapper" val="Yolo">
+            <div class="fake-textarea-div col-sm-12">
+              <p>Click to <span class="reply-link"><a href="/temporary_message" data-remote="true"> reply </a></span> or <span class="forward-link"><a href="/temporary_message" data-remote="true"> forward</a></span>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-sm-12" style="display:none;">
         <div class="container">
           <div class="col-sm-12">
             <%= form_with(model: @message, local: true) do |form| %>
@@ -156,10 +168,11 @@
               <% end %>
 
               <div class="field">
+                <%= form.text_field :receiver, id: :message_receiver, class: "receiver-input" %>
                 <%= form.trix_editor :body, id: :message_body %>
               </div>
 
-              <div class="actions">
+              <div class="actions message-btns-wrapper">
                 <%= form.submit "Send", class: "btn submit-message-btn" %>
                 <a class="btn delete-message-btn" href="#">Trash</a>
               </div>

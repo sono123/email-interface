@@ -8,6 +8,10 @@ class MessagesController < ApplicationController
     @message = Message.new
   end
 
+  def temporary_message
+    render :temporary_message
+  end
+
   # GET /messages/1
   # GET /messages/1.json
   def show

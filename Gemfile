@@ -38,6 +38,7 @@ gem 'bootstrap-sass'
 gem 'jquery-rails', '4.3.1'
 gem 'popper_js', '~> 1.9', '>= 1.9.9'
 gem 'trix', '~> 0.9.0'
+gem 'faker', '~> 1.6', '>= 1.6.6'
 
 
 group :development, :test do

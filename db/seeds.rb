@@ -5,3 +5,26 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+
+
+20.times do |m|
+  Message.create([
+                  {receiver: "steveono@gmail.com"},
+                  {sender: "mikejones@gmail.com"},
+                  {subject: "Ruby Meetup Tomorrow"},
+                  {body: "Lorem ipsum filler text."}
+                  ])
+end
+
+
+
+
+
+
+
+
+
+
+
