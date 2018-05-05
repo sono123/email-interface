@@ -409,7 +409,7 @@ trix-editor:-moz-placeholder { /* Firefox 18- */
 }
 
 
-.receiver-input {
+.to-input {
   position: absolute;
   width: calc(100% - 30px);
   top: 2.5rem;
@@ -421,7 +421,7 @@ trix-editor:-moz-placeholder { /* Firefox 18- */
   border-radius: .25rem;
 }
 
-.receiver-input:focus {
+.to-input:focus {
   box-shadow: none;
   -webkit-box-shadow: none;
   border: none;

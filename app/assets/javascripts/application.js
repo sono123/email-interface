@@ -16,5 +16,6 @@
 //= require turbolinks
 //= require bootstrap
 //= require trix
+//= require messages.js
 //= require_tree .
 

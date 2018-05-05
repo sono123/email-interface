@@ -1,4 +1,6 @@
 
+<% @messages.each do |message| %>
+
 <div class="message-wrapper row">
   <div class="col-sm-12">
     <div class="message-summary row">
@@ -19,43 +21,8 @@
       </div>
     </div>
 
-    <div class="message-summary row">
-      <div class="col-sm-3">
-        <input type="checkbox" id="checkbox-num" class="check-input" name="vehicle">
-        <label for="checkbox-num" class="check-label"></label>
-        <span class="oi oi-star starred"></span>
-        <span class="oi oi-media-play important-icon"></span>
-        <a href="#" class="sender">Mike Jones</a>
-      </div>
 
-      <div class="col-sm-8">
-        <p class="subject-body-preview"><span class="subject">Ruby Meetup Next Week - </span><span class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit condimentum. Aenean venenatis nibh a vulputate malesuada. Praesent condimentum dui quis pellentesque gravida.</span></p>
-      </div>
-
-      <div class="col-sm-1">
-        <p class="date">4/29/2018</p>
-      </div>
-    </div>
-
-    <div class="message-summary row">
-      <div class="col-sm-3">
-        <input type="checkbox" id="checkbox-num" class="check-input" name="vehicle">
-        <label for="checkbox-num" class="check-label"></label>
-        <span class="oi oi-star starred"></span>
-        <span class="oi oi-media-play important-icon"></span>
-        <a href="#" class="sender">Mike Jones</a>
-      </div>
-
-      <div class="col-sm-8">
-        <p class="subject-body-preview"><span class="subject">Ruby Meetup Next Week - </span><span class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit condimentum. Aenean venenatis nibh a vulputate malesuada. Praesent condimentum dui quis pellentesque gravida.</span></p>
-      </div>
-
-      <div class="col-sm-1">
-        <p class="date">4/29/2018</p>
-      </div>
-    </div>
-
-    <div class="message-detail row">
+    <div class="message-detail row" style="display:none;">
       <div class="col-sm-6">
         <button class="details-btn btn dropdown-toggle" type="button" id="dropdownMenuButton-num" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <span class="oi oi-info"></span>
@@ -114,8 +81,9 @@
               </div>
           </div>
 
-          <div class="email-message-body col-sm-12">
-            <p>Hi there,</p>
+          <div class="email-message-body trix-content col-sm-12">
+            <%= sanitize message.body %>
+            <!-- <p>Hi there,</p>
             <br>
             <p>During the above window the network engineering team will be performing upgrades on critical hardware within our San Francisco regions. This is pro-active maintenance to ensure optimal performance of the networking infrastructure.</p>
             <br>
@@ -130,7 +98,7 @@
             <br>
             <p>Affected Droplets:</p>
             <p>personal-projects-01</p>
-            <p>portfolio-2018</p>
+            <p>portfolio-2018</p> -->
 
             <!-- <div class="fake-textarea-div col-sm-12">
               <p>Click to <span class="reply-link"><a href="/temporary_message" data-remote="true"> reply </a></span> or <span class="forward-link"><a href="/temporary_message" data-remote="true"> forward</a></span>.</p>
@@ -168,7 +136,7 @@
               <% end %>
 
               <div class="field">
-                <%= form.text_field :receiver, id: :message_receiver, class: "receiver-input" %>
+                <%= form.text_field :to, id: :message_to, class: "to-input" %>
                 <%= form.trix_editor :body, id: :message_body %>
               </div>
 
@@ -192,7 +160,7 @@
   </div>
 </div>
 
-
+<% end %>
 
 
 
