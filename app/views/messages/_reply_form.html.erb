@@ -1,0 +1,36 @@
+<%= form_with(model: message = Message.new, local: true, class: "col-sm-12 reply-form") do |form| %>
+  <% if message.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@message.errors.count, "error") %> prohibited this message from being saved:</h2>
+
+      <ul>
+      <% message.errors.full_messages.each do |message| %>
+        <li>< %= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field col-sm-12 pl-0 pr-0">
+    <%= form.text_field :to, id: :message_to, class: "to-input" %>
+    <%= form.trix_editor :body, id: :message_body %>
+  </div>
+
+  <div class="actions message-btns-wrapper">
+    <%= form.submit "Send", class: "btn submit-message-btn" %>
+    <a class="btn delete-message-btn" href="#">Trash</a>
+  </div>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -9,7 +9,9 @@ class MessagesController < ApplicationController
   end
 
   def temporary_message
+    @id = params[:message_id]
     render :temporary_message
+    @message = Message.new
   end
 
   # GET /messages/1
@@ -74,6 +76,17 @@ class MessagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def message_params
-      params.require(:message).permit(:from, :to, :subject, :body)
+      params.require(:message).permit(:from, :to, :subject, :body, :id)
     end
 end
+
+
+
+
+
+
+
+
+
+
+

@@ -1,4 +1,6 @@
 
-// var value = $(".message-form-wrapper")
+$("#form-wrapper-<%= @id %> .fake-textarea-div").replaceWith( "<%= escape_javascript render(:partial => 'messages/reply_form', :locals => { :message => @message }) %>" );
 
-alert("Hello");
+
+// Hide the prev element instead of replacing it. This way you can bring it back easily if you discard the form.
+

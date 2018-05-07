@@ -445,7 +445,7 @@ trix-editor:-moz-placeholder { /* Firefox 18- */
 
 .to-input {
   position: absolute;
-  width: calc(100% - 30px);
+  width: 100%;
   top: 2.5rem;
   padding: 0.5rem 0.75rem;
   font-size: .9rem;
@@ -498,6 +498,10 @@ trix-toolbar .button_group button.active, trix-toolbar .button_group input[type=
   border: none;
 }
 
+.submit-message-btn:hover {
+  background: #867cdb;
+}
+
 .delete-message-btn {
   padding: 0.35rem 1.5rem;
   margin-top: .5rem;
@@ -506,9 +510,15 @@ trix-toolbar .button_group button.active, trix-toolbar .button_group input[type=
   border: none;
 }
 
+.delete-message-btn:hover {
+  background: #db5180;
+  color: white;
+}
 
-
-
+.reply-form {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
 
 
 
