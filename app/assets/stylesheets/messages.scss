@@ -81,12 +81,20 @@ input[type="checkbox"]:checked ~ label.check-label:after {
 
 
 .starred {
-  margin: .43rem .8rem .5rem 1rem;
+  margin: .4rem .8rem .5rem 1rem;
 }
 
 .starred:empty:before {
   color: #e6e8ec;
 }
+.starred-selected:empty:before {
+  color: #ffee58;
+}
+
+.important-icon-selected:empty:before {
+  color: #ffd54f;
+}
+
 
 .message-summary {
   /*padding: 0.75rem 1rem;*/

@@ -23,18 +23,18 @@
 
     <div class="message-summary row">
       <div class="col-auto check-col">
-        <input type="checkbox" id="checkbox-num" class="check-input" name="vehicle">
-        <label for="checkbox-num" class="check-label"></label>
+        <input type="checkbox" id="checkbox-num-<%=message.id%>" class="check-input" name="vehicle">
+        <label for="checkbox-num-<%=message.id%>" class="check-label"></label>
         <span class="oi oi-star starred"></span>
         <span class="oi oi-media-play important-icon"></span>
       </div>
 
       <div class="col-sm-2 sender-col expand">
-        <span class="sender">Mike Jones</span>
+        <span class="sender"><%= message.from.gsub(/\s*\<[^)]*\>/, '')  %></span>
       </div>
 
       <div class="col text-truncate subject-body-col expand">
-        <p class="subject-body-preview"><span class="subject">Ruby Meetup Next Week - </span><span class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit condimentum. Aenean venenatis nibh a vulputate malesuada. Praesent condimentum dui quis pellentesque gravida.</span></p>
+        <p class="subject-body-preview"><span class="subject"><%= Faker::Lorem.sentence(3, false, 4) %> - </span><span class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit condimentum. Aenean venenatis nibh a vulputate malesuada. Praesent condimentum dui quis pellentesque gravida.</span></p>
       </div>
 
       <div class="col-sm-1 date-col expand">
