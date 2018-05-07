@@ -25,7 +25,8 @@
     height: 14px;
     z-index: 0;
     background: #e6e8ec;
-    margin-top: .55rem;
+    /*margin-top: .55rem;*/
+    margin-top: 1.2rem;
     -webkit-transition: .2s;
     transition: .2s;
 }
@@ -56,13 +57,15 @@ input[type="checkbox"]:checked ~ label.check-label:before {
   z-index: 0;
   border: none;
   background: #9f98d9;
-  margin-top: .55rem;
+  /*margin-top: .55rem;*/
+  margin-top: 1.2rem;
   transition: background 0.25s linear;
   -webkit-transition: background 0.25s linear;
 }
 
 input[type="checkbox"]:checked ~ label.check-label:after {
-  top: .55rem;
+  /*top: .55rem;*/
+  top: 1.25rem;
   left: -1px;
   width: 7px;
   height: 12px;
@@ -78,7 +81,7 @@ input[type="checkbox"]:checked ~ label.check-label:after {
 
 
 .starred {
-  margin: .45rem .8rem .5rem 1rem;
+  margin: .43rem .8rem .5rem 1rem;
 }
 
 .starred:empty:before {
@@ -86,7 +89,8 @@ input[type="checkbox"]:checked ~ label.check-label:after {
 }
 
 .message-summary {
-  padding: 0.75rem 1rem;
+  /*padding: 0.75rem 1rem;*/
+  padding: 0 1rem;
   /*font-family: 'Quicksand', sans-serif;*/
   /*background: #f7f9fc;*/
   background: #f7f8f9;
@@ -95,18 +99,40 @@ input[type="checkbox"]:checked ~ label.check-label:after {
   -webkit-transition: all .1s ease-in;
   transition: all .1s ease-in;
   p {
-    margin: .35rem .5rem;
+    margin: .21rem .5rem;
   }
   .sender {
     display: inline;
-    color: #7c72d2;
+    /*color: #7c72d2;*/
+    color: #7c76b1;
     font-weight: 700;
     /*color: #9895be;*/
     /*font-weight: bold;*/
-    vertical-align: .15rem;
+    /*vertical-align: .15rem;*/
+    /*vertical-align: -.15rem;*/
     margin-left: 1.5rem;
     font-size: .85rem;
+    /*padding-top: 0.75rem;*/
+    /*padding-bottom: 0.75rem;*/
   }
+  /*consolidate these 3 if no further changes are required.*/
+  .sender-col {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+  .subject-body-col {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+  .date-col {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .check-col {
+    padding-top: .7rem;
+  }
+
   .subject {
     color: #707275;
   }
