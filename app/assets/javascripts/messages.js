@@ -18,6 +18,12 @@ $(document).on("turbolinks:load", function() {
     $("#reply-form-" + id).remove();
     $("#form-wrapper-" + id + " .fake-textarea-div").show();
   });
+
+  // $(document).on("click",".message-menu-reply",function() {
+  //   var id = $(this).attr("value");
+  //   $("#reply-form-" + id).remove();
+  //   $("#form-wrapper-" + id + " .fake-textarea-div").show();
+  // });
 });
 
 

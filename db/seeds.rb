@@ -18,7 +18,7 @@ trix_formatted_text = "<div>Hi there,</div><div><br></div><div>During the above 
   Message.create({
                   to: "Steve Ono <stevenono@gmail.com>",
                   from: formatted_email(Faker::Name.name),
-                  subject: "Ruby Meetup Tomorrow",
+                  subject: Faker::Lorem.sentence(3, false, 4).chop!,
                   body: trix_formatted_text
                 })
 end

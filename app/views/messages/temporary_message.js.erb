@@ -2,7 +2,7 @@
 // $("#form-wrapper-< %= @id %> .fake-textarea-div").replaceWith( "< %= escape_javascript render(:partial => 'messages/reply_form', :locals => { :message => @message }) %>" );
 
 
-
+$("#reply-form-<%= @id %>").remove();
 $("#form-wrapper-<%= @id %> .fake-textarea-div").hide();
 $("#form-wrapper-<%= @id %>").append( "<%= escape_javascript render(:partial => 'messages/reply_form', :locals => { :message => @message, :id => @id }) %>" );
 
