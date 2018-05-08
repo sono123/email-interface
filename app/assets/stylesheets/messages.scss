@@ -420,8 +420,8 @@ trix-editor:-moz-placeholder { /* Firefox 18- */
 
 .fake-textarea-div {
   font-size: .9rem;
-  margin-top: 4rem;
   margin-top: 2rem;
+  margin-bottom: 2rem;
   height: 7rem;
   background: #f7f9fc;
   border-radius: .25rem;
@@ -517,7 +517,7 @@ trix-toolbar .button_group button.active, trix-toolbar .button_group input[type=
 
 .reply-form {
   margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 
