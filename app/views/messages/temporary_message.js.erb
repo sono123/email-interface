@@ -10,4 +10,6 @@ if ( $("#message-menu-<%= @id %>").attr('aria-expanded') == "true" ) {
   console.log("aria-expanded is false");
 }
 
+var toEmail = $("#details-menu-<%= @id %> .from-email").text();
+$("#reply-form-<%= @id %> .to-input").attr('placeholder', toEmail);
 

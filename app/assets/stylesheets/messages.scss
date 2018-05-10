@@ -196,6 +196,7 @@ input[type="checkbox"]:checked ~ label.check-label:after {
   background: white;
   padding-top: 1rem;
   box-shadow: inset 0 2px 2px 0 rgba(0,0,0,0.14), inset 0 2px 2px 0 rgba(0,0,0,0.14);
+  box-shadow: inset 0px 11px 8px -10px rgba(0,0,0,0.14), inset 0px -11px 8px -10px rgba(0,0,0,0.14);
   .dropdown-menu {
     p {
       font-size: .8rem;
@@ -523,7 +524,24 @@ trix-toolbar .button_group button.active, trix-toolbar .button_group input[type=
   margin-bottom: 2rem;
 }
 
-
+.unread {
+  .sender {
+    font-weight: bold;
+    color: #4c4493;
+  }
+  .subject {
+    font-weight: bold;
+    color: #4c4494;
+  }
+  .body {
+    font-weight: bold;
+    color: #4c4494;
+  }
+  .date {
+    font-weight: bold;
+    color: #4c4494;
+  }
+}
 
 
 

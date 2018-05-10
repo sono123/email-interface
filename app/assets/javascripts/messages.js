@@ -1,5 +1,5 @@
 
-$(document).on("turbolinks:load", function() {
+// $(document).on("turbolinks:load", function() {
   $(document).on("click",".expand",function() {
     $(this).parent().next().slideToggle();
   });
@@ -18,7 +18,20 @@ $(document).on("turbolinks:load", function() {
     $("#reply-form-" + id).remove();
     $("#form-wrapper-" + id + " .fake-textarea-div").show();
   });
-});
+
+  $(document).on("click",".collapse-up",function() {
+    $(this).closest(".message-detail").slideUp();
+  });
+
+  $(document).on("click",".trash",function() {
+    $(this).closest(".message-wrapper").fadeOut();
+    $(this).closest(".message-wrapper").remove();
+  });
+
+  $(document).on("click",".message-wrapper",function() {
+    $(this).removeClass("unread");
+  });
+// });
 
 
 
