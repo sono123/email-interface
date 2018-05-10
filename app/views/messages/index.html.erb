@@ -141,13 +141,36 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Success</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Compose</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        Your message has been sent.
+            <%= form_with(model: message = Message.new, remote: true, class: "col-sm-12 reply-form pl-0 pr-0", id: "reply-form-one") do |form| %>
+              <% if message.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(@message.errors.count, "error") %> prohibited this message from being saved:</h2>
+
+                  <ul>
+                  <% message.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                  </ul>
+                </div>
+              <% end %>
+
+              <%= form.hidden_field :id, :value => "one" %>
+
+              <div class="field col-sm-12 pl-0 pr-0">
+                <%= form.text_field :to, id: :message_to, class: "to-input" %>
+                <%= form.trix_editor :body, id: :message_body %>
+              </div>
+
+              <div class="actions message-btns-wrapper">
+                <%= form.submit "Send", class: "btn submit-message-btn" %>
+              </div>
+            <% end %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

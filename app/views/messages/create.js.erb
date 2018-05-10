@@ -1,8 +1,15 @@
 
-$('#reply-form-<%= @id %>').remove();
-$('#form-wrapper-<%= @id %> .fake-textarea-div').show();
-console.log('the id is <%= @id %>');
+if ( "<%= @id %>" == "one" ) {
+  console.log("Inside IF. The id is " + "<%= @id %>");
+  $('#compose-message-modal').modal('toggle');
+} else {
+  console.log("Inside ELSE. The id is " + "<%= @id %>");
+  $('#reply-form-<%= @id %>').remove();
+  $('#form-wrapper-<%= @id %> .fake-textarea-div').show();
+}
 $('#success-message-modal').modal('show');
 
+
+// console.log("The id is " + "<%= @id %>");
 
 

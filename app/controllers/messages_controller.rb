@@ -31,13 +31,10 @@ class MessagesController < ApplicationController
   # POST /messages
   # POST /messages.json
   def create
+    @id = params[:message][:id]
     # @message = Message.new(message_params)
     # @id = params[:id]
 
-    @id = params[:message][:id]
-    puts "*************************"
-    puts @id
-    puts "*************************"
     # respond_to do |format|
     #   if @message.save
     #     format.html { redirect_to @message, notice: 'Message was successfully created.' }
