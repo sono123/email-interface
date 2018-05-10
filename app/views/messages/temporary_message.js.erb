@@ -1,10 +1,13 @@
 
-// $("#form-wrapper-< %= @id %> .fake-textarea-div").replaceWith( "< %= escape_javascript render(:partial => 'messages/reply_form', :locals => { :message => @message }) %>" );
-
-
 $("#reply-form-<%= @id %>").remove();
 $("#form-wrapper-<%= @id %> .fake-textarea-div").hide();
 $("#form-wrapper-<%= @id %>").append( "<%= escape_javascript render(:partial => 'messages/reply_form', :locals => { :message => @message, :id => @id }) %>" );
 
-// Hide the prev element instead of replacing it. This way you can bring it back easily if you discard the form.
+if ( $("#message-menu-<%= @id %>").attr('aria-expanded') == "true" ) {
+  $("#message-menu-<%= @id %>").dropdown('toggle');
+  console.log("aria-expanded is true");
+} else {
+  console.log("aria-expanded is false");
+}
+
 
