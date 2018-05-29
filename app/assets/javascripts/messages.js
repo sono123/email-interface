@@ -1,6 +1,7 @@
 
 // $(document).on("turbolinks:load", function() {
   $(document).on("click",".expand",function() {
+    $(this).closest(".message-wrapper").removeClass("unread");
     $(this).parent().next().slideToggle();
   });
 
@@ -28,9 +29,9 @@
     $(this).closest(".message-wrapper").remove();
   });
 
-  $(document).on("click",".message-wrapper",function() {
-    $(this).removeClass("unread");
-  });
+  // $(document).on("click",".message-wrapper",function() {
+  //   $(this).removeClass("unread");
+  // });
 // });
 
 
