@@ -23,7 +23,7 @@ test:
 production:
   adapter: postgresql
   host: 127.0.0.1
-  database: email-interface_production
+  database: email_interface_production
   username: deploy
   password: <%= ENV['DB_PASSWORD'] %>
   encoding: unicode
